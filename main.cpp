@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 {
-    cout << "" << endl;
+    cout << "ingrese los coeficientes de la matriz A" << endl;
     return 0;
 }
