@@ -1,44 +1,35 @@
 /**Gaussian elimination programming class I C ++**/
 #include <iostream>
-#include <time.h>
-#include <math.h>
+#include <ctime>
+#include <cmath>
 #include <cstdlib>
 #include <iomanip>
+char jump= '\n'; // Salto de linea
 using namespace std;
-char jump= '\n';
-
+void coeficintes (float X[][500], int); // Se ingresan los elementos de a la MatrizA
 int main()
 {
-    srand(time(NULL));
+    int n,N=4;
+    cout << "ingrese los sistemas lineales que quiere resolver" << jump;
+    cin >> n;
+    float MatrizA[n][500];
+    coeficintes(MatrizA,n);
 
-    int N=4;
-
-    float X[N][N];
-    int Y[10];
-
-    for(int i=0; i < N; i++){
-        for(int j=0; j< N; j++ ){
-        X[i][j] = rand()%9+1;
-        }
-
-    }
-
-    for(int i=0; i < N; i++){
-        for(int j=0; j< N; j++ ){
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++ ){
                 cout << setw(3);
-        cout <<" "<< X[i][j];
+        cout << MatrizA[i][j];
     if (j==N-1){
         cout<<jump;
     }
         }
-
     }
 
     cout<<"---------------"<<jump;
-         if (X[0][0]!=1){
-                float F= X[0][0];
-            for(int k=0; k < N; k++){
-                    X[0][k] = (X[0][k])/(F);
+         if (MatrizA[0][0]!=1){
+                float F = MatrizA[0][0];
+            for(int k=0; k<N; k++){
+                    MatrizA[0][k] = (MatrizA[0][k])/(F);
                     cout<<"<--------------->"<<jump;
             }
                 }
@@ -47,10 +38,21 @@ int main()
         for(int j=0; j< N; j++ ){
                 cout << setw(3);
 
-        cout <<" "<< X[i][j];
+        cout <<" "<< MatrizA[i][j];
     if (j==N-1){
         cout<<jump;
     }
         }
-
     }
+    return 0;
+}
+void coeficintes (float X[][500], int N){
+    srand(time(NULL)); /*prueba con números al azar*/
+    cout << "Ingrese los coeficientes de cada variable" <<jump;
+        for(int i=0; i<N; i++){
+            for(int j=0; j< N; j++){
+                X[i][j] = rand()%9+1; /* Ingreso de números del 1 al 9 */
+                //cin>> X[i][j];
+        }
+    }
+}
