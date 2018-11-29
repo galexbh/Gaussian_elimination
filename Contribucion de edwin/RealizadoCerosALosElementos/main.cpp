@@ -42,6 +42,7 @@ int main()
 
 
     cout<<"---------------"<<endl;
+        system ("pause");
     //Haciedo uno (1) al primer elemento
          if (X[0][0]!=1){
                 float F= X[0][0];
@@ -73,7 +74,7 @@ int main()
                 cout<<"Imprimiendo la nueva matriz"<<endl;
      for(int i=0; i < N; i++){
         for(int j=0; j< N; j++ ){
-                cout << setw(3);
+                cout << setw(6);
 
         cout <<" "<<setprecision(1)<< X[i][j];
     if (j==N-1){
