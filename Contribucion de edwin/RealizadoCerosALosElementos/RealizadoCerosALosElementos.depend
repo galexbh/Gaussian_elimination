@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1543620117 source:c:\users\mc leman\documents\alomtec\tareasajenas\gabriel\realizadocerosaloselementos\main.cpp
+	<iostream>
+	<time.h>
+	<math.h>
+	<cstdlib>
+	<iomanip>
+
