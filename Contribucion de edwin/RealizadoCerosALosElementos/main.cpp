@@ -27,21 +27,18 @@ int main()
     float temp[4][4];
     // int B[100];
 
+    /**Ingreso de datos**/
+    
     for(int i=0; i < N; i++)
     {
         for(int j=0; j< N; j++ )
-        {
-            do
-            {
+        {            
                 cout<<"**************************--------------------> ";
                 X[i][j] = rand()%4+1;
                 temp[i][j] = X[i][j];
-            }
-            while(X[j][j]==0);
         }
-
     }
-
+/*-------------------------*/
     cout<<"Imprimiendo la  matriz original"<<endl;
     for(int i=0; i < N; i++)
     {
