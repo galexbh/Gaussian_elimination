@@ -3,8 +3,8 @@ Project for programming class I at UNAH (Autonomous University of Honduras)  The
 
 ## Autores/Authors ✒️
 
-* **Gabriel Barrientos** - *Documentation & Development* - [VanhelsingX3](https://github.com/VanhelsingX3)
 * **Edwin Olivera** - *Initial Work & Development* - [EdwinOlivera](https://github.com/EdwinOlivera)
+* **Gabriel Barrientos** - *Documentation & Development* - [VanhelsingX3](https://github.com/VanhelsingX3)
 
 ## Licencia/License 📄
 
