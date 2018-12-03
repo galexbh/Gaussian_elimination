@@ -19,7 +19,7 @@ int main()
     float aux=0;
     float eliminar = 0;
     float diagonal=1;
-    float columnas_fijas = 0;
+    float Eliminar_B = 0;
     float elemento_Permanente1;
     float elemento_Permanente2;
     float Renglon_Evaluar=0;
@@ -34,27 +34,34 @@ int main()
     float B[100][1];
 for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
 
+  cout << "Iniciando la aplicacion" << endl;
 
-    for(int i=0; i < N; i++)
-    {
-        for(int j=0; j< N; j++ )
-        {
-            //Introduciendo los datos de la matriz A
-            X[i][j] = rand()%10+1;
 
-        }
-            //Introduciendo los datos de la matriz B
-        B[i][0] = rand()%10+1;
+    cout<<"        <<<<Metodo de Gauss >>>>         ";
+cout<<"\n Matriz cuadrada de orden N= ";
+cin>>N;
+cout<<"\n Digite los elementos de la matriz en la posicion ";
+for(int i=0;i<N;i++)
+{
+for(int j=0;j<N;j++)
+{
+cout<<"\n M=["<<i+1<<","<<j+1<<"]= ";
+cin>>X[i][j];
+}
+cout<<"\n Termino independiente de X"<<i+1<<" ";
+cin>>B[i][0];
 
-    }
+}
 
+    cout<<endl;
+    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
     cout<<"Imprimiendo la  matriz original"<<endl;
     for(int i=0; i < N; i++)
     {
         for(int j=0; j< N; j++ )
         {
             cout << setw(3);
-            cout <<" "<< X[i][j];
+            cout <<"|"<< X[i][j]<<"|";
 
             if (j==N-1)
             {
@@ -68,10 +75,11 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
     {
         aux=B[i][0];
 
-         cout <<"|"<<setprecision(5)<<aux<<"|"<<endl;
+         cout <<"    |"<<setprecision(5)<<aux<<"|"<<endl;
 
-    }
-    cout<<"---------------"<<endl;
+    }    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
+    cout<<"<--------------------------------------------------------------->"<<endl;
+    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
 //Haciedo uno (1) al primer elemento
     if (X[0][0]!=1)
     {
@@ -97,35 +105,18 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
 
 
         }
-        columnas_fijas = columnas_fijas * B[Fila-1][0];
-        B[Fila][0] = B[Fila][0]+ elemento_Permanente1;
-        DiagonalEnUno(N, X, diagonal,B);//Funcion que hace UNO (1) a todo los elementos de la diagonal principal
+        Eliminar_B = elemento_Permanente2 * B[Ceros][0];
+        B[Fila][0] = B[Fila][0]+ Eliminar_B;
 
+       //Funcion que hace UNO (1) a todo los elementos de la diagonal principal
+         DiagonalEnUno(N, X, diagonal,B);
     }
 
     a+=1;//Inicia en UNO (1)
     C+=1;//Inicia en CERO (0)
     }
 
-    cout<<"Imprimiendo la  matriz con los elementos Ceros debajo de la diagonal principal"<<endl;
-    for(int i=0; i < N; i++)
-    {
-        for(int j=0; j< N; j++ )
-        {
-            cout << setw(3);
-            aux=X[i][j];
-            if(aux == 0){
-                X[i][j]= aux*aux;
-                aux=X[i][j];
-            }
-            cout <<"|"<<setprecision(5)<<aux;
-            if (j==N-1)
-            {
-                cout<<endl;
-            }
-        }
 
-    }
     cout<<"Imprimiendo la nueva matriz. Despues de las operacions De GAUSS"<<endl;
     for(int i=0; i < N; i++)
     {
@@ -146,7 +137,7 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
         }
 
     }
-
+    cout<<"-------------------------/*/*-------------------------"<<endl;
     cout<<"Imprimiendo la matriz B. Los componentes independientes"<<endl;
     for(int i=0; i < N; i++)
     {
@@ -156,12 +147,14 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
          cout <<"|"<<setprecision(5)<<aux<<"|"<<endl;
 
     }
+
+    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
     cout<<endl;
     do{
             //Pregunta si se quiere crear la matriz identidad, usando la matriz anterior
     cout<<"¿Desea crea la matriz anterior en una matriz Identidad?"<<endl;
     cout<<"1 = Si"<<endl;
-    cout<<"2 = No"<<endl;
+    cout<<"2 = Salir del sistema"<<endl;
     cout<<endl;
     cout<<"*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"<<endl;
     cout<<"------------------------------> :";
@@ -178,9 +171,12 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
         break;
     default:
         cout<<"no se reconoce la opcion que ha ingresado. Ingrese de nuevo el numero"<<endl;
+        cout<<"------///-------------------/*/*----------------///---------"<<endl;
+        cout<<endl;
         break;
 
     }
+
     }while(opcion<1 || opcion>2);
 }
     return 0;
@@ -223,6 +219,8 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
         g=g-1;//N-1 = 4-1=3,2,1,0
 
     }
+
+    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
     //Imprimiendo la matriz, despues de haber hecho los calculos de Gauss-Jordan
         cout<<"Imprimiendo la nueva matriz Identidad"<<endl;
     for(int i=0; i < N; i++)
@@ -256,4 +254,5 @@ for(int RecorridoTotal =0; RecorridoTotal<1; RecorridoTotal++){
          cout <<"|"<<setprecision(5)<<aux<<"|"<<endl;
 
     }
+        cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/"<<endl;
 }
