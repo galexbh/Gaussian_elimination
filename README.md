@@ -12,5 +12,5 @@ This project is under the License (GPL 3.0) - see the file [LICENSE.md](LICENSE.
 
 ## Expresiones de Gratitud/Expressions of Gratitude 🎁
 
-* I thank Patricia Sanchez and Rafa Carias for your collaboration.  📢
+* I thank Patricia Sanchez, Daniela and Rafa Carias for your collaboration.  📢
 * Then we go for a 🍺 Edwin Oliver >.< 
