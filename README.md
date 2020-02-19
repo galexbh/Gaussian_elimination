@@ -8,7 +8,7 @@ Project for programming class I at UNAH (Autonomous University of Honduras)  The
 
 ## Licencia/License 📄
 
-This project is under the License (GPL 3.0) - see the file [LICENSE.md](LICENSE.md) for details
+This project is under the License (MIT) - see the file [LICENSE.md](LICENSE.md) for details
 
 ## Expresiones de Gratitud/Expressions of Gratitude 🎁
 
