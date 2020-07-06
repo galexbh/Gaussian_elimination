@@ -4,7 +4,7 @@ Project for programming class I at UNAH (Autonomous University of Honduras)  The
 ## Autores/Authors ✒️
 
 * **Edwin Olivera** - *Initial Work & Development* - [EdwinOlivera](https://github.com/EdwinOlivera)
-* **Gabriel Barrientos** - *Documentation & Development* - [VanhelsingX3](https://github.com/VanhelsingX3)
+* **Gabriel Barrientos** - *Documentation & Development* - [galexbh](https://github.com/galexbh)
 
 ## Licencia/License 📄
 
