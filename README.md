@@ -6,6 +6,10 @@ Project for programming class I at UNAH (Autonomous University of Honduras)  The
 * **Edwin Olivera** - *Initial Work & Development* - [EdwinOlivera](https://github.com/EdwinOlivera)
 * **Gabriel Barrientos** - *Documentation & Development* - [galexbh](https://github.com/galexbh)
 
+## Necesario/Necessary 📄
+
+[GCC](https://gcc.gnu.org/) 
+
 ## Licencia/License 📄
 
 This project is under the License (MIT) - see the file [LICENSE.md](LICENSE.md) for details
